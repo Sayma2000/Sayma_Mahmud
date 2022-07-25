@@ -1,0 +1,44 @@
+<!-- ======= User Login Section ======= -->
+<section  class="book-a-table " >
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title mt-5 p-3">
+            <h2>User</h2>
+            <p>Login</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form login-form">
+                <form action="index.php" class="php-form" method="POST" autocomplete="">
+                    <h2 class="text-center">Login Form</h2>
+                    <p class="text-center">Login with your NSU ID and Password.</p>
+                    <?php
+                 if (count($errors) > 0) {
+                    ?>
+                        <div class="alert alert-danger text-center p-2">
+                            <?php
+                             foreach ($errors as $showerror) {
+                                 echo $showerror;
+                             }
+                            ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                    <div class="form-group p-2">
+                        <input class="form-control" type="text" name="NsuId" placeholder="NSU ID" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group p-2 ">
+                        <input class="form-control btn  text-center mb-2" style="width:100%; background:black; color:white;border:2px solid #cda45e;border-radius:10px;" type="submit" name="Login" value="Login">
+                    </div>
+                    <div class="link login-link text-center ">Not yet a member? <a href="index.php?PageName=Register">Signup now</a></div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End User Login Section-->
